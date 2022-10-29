@@ -1,17 +1,27 @@
 package com.example.getmesocialservice.model;
 
+import org.springframework.data.annotation.Id;
+
 public class User {
 
+    @Id
+    private String id;
     private String name;
-    private String address;
-    private int age;
-    private String profilePicUrl;
+    private String email;
+    private String profilePhotoUrl;
 
-    public User(String name, String address, int age, String profilePicUrl) {
+    public User(String name, String email, String profilePhotoUrl) {
         this.name = name;
-        this.address = address;
-        this.age = age;
-        this.profilePicUrl = profilePicUrl;
+        this.email = email;
+        this.profilePhotoUrl = profilePhotoUrl;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -22,27 +32,19 @@ public class User {
         this.name = name;
     }
 
-    public String getAddress() {
-        return address;
+    public String getEmail() {
+        return email;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    public int getAge() {
-        return age;
+    public String getProfilePhotoUrl() {
+        return profilePhotoUrl;
     }
 
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    public String getProfilePicUrl() {
-        return profilePicUrl;
-    }
-
-    public void setProfilePicUrl(String profilePicUrl) {
-        this.profilePicUrl = profilePicUrl;
+    public void setProfilePhotoUrl(String profilePhotoUrl) {
+        this.profilePhotoUrl = profilePhotoUrl;
     }
 }

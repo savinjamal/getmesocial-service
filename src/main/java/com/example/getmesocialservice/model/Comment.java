@@ -1,16 +1,16 @@
 package com.example.getmesocialservice.model;
 
-public class Album {
+public class Comment {
 
-    String id;
-    String name;
-    String coverPhotoUrl;
-    String createdBy;
-    String dateCreated;
+    private String id;
+    private String photoId;
+    private String message;
+    private String createdBy;
+    private String dateCreated;
 
-    public Album(String name, String coverPhotoUrl, String createdBy, String dateCreated) {
-        this.name = name;
-        this.coverPhotoUrl = coverPhotoUrl;
+    public Comment(String photoId, String message, String createdBy, String dateCreated) {
+        this.photoId = photoId;
+        this.message = message;
         this.createdBy = createdBy;
         this.dateCreated = dateCreated;
     }
@@ -23,20 +23,20 @@ public class Album {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getPhotoId() {
+        return photoId;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setPhotoId(String photoId) {
+        this.photoId = photoId;
     }
 
-    public String getCoverPhotoUrl() {
-        return coverPhotoUrl;
+    public String getMessage() {
+        return message;
     }
 
-    public void setCoverPhotoUrl(String coverPhotoUrl) {
-        this.coverPhotoUrl = coverPhotoUrl;
+    public void setMessage(String message) {
+        this.message = message;
     }
 
     public String getCreatedBy() {
