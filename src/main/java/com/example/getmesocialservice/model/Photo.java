@@ -1,10 +1,13 @@
 package com.example.getmesocialservice.model;
 
+import com.example.getmesocialservice.validation.ValidCreatedBy;
+
 public class Photo {
 
     private String id;
     private String albumId;
     private String photoUrl;
+    @ValidCreatedBy
     private String createdBy;
     private String dateCreated;
 

@@ -1,10 +1,17 @@
 package com.example.getmesocialservice.model;
 
+import com.example.getmesocialservice.validation.ValidCreatedBy;
+import com.example.getmesocialservice.validation.ValidName;
+
+import javax.validation.constraints.Max;
+
 public class Album {
 
     String id;
+    @Max(value = 10)
     String name;
     String coverPhotoUrl;
+    @ValidCreatedBy
     String createdBy;
     String dateCreated;
 

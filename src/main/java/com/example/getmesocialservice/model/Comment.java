@@ -1,10 +1,16 @@
 package com.example.getmesocialservice.model;
 
+import com.example.getmesocialservice.validation.ValidCreatedBy;
+
+import javax.validation.constraints.Min;
+
 public class Comment {
 
     private String id;
     private String photoId;
+    @Min(value = 5)
     private String message;
+    @ValidCreatedBy
     private String createdBy;
     private String dateCreated;
 

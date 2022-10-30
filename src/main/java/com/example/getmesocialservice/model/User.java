@@ -1,13 +1,24 @@
 package com.example.getmesocialservice.model;
 
+import com.example.getmesocialservice.validation.ValidName;
+import org.hibernate.validator.constraints.Length;
+import org.springframework.beans.factory.support.ManagedArray;
 import org.springframework.data.annotation.Id;
+
+import javax.validation.constraints.Email;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotEmpty;
 
 public class User {
 
     @Id
     private String id;
+
     private String name;
+    @Email
     private String email;
+    @NotEmpty
     private String profilePhotoUrl;
 
     public User(String name, String email, String profilePhotoUrl) {

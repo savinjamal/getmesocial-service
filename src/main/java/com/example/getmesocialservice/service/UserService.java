@@ -4,8 +4,10 @@ import com.example.getmesocialservice.model.User;
 import com.example.getmesocialservice.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 
 import java.util.List;
+import java.util.NoSuchElementException;
 
 @Service
 public class UserService {
@@ -30,6 +32,7 @@ public class UserService {
     }
 
     public List<User> getByUserId(String userId) {
+
         return userRepository.findUserById(userId);
     }
 
