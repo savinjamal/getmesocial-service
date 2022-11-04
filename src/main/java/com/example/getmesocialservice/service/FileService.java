@@ -19,7 +19,7 @@ public class FileService {
 
     public boolean upload(MultipartFile file) {
 
-        BasicAWSCredentials basicAWSCredentials = new BasicAWSCredentials("AKIAUQ5GS36I2ZNLIN4X", "DUWgDy3GtMqBcypqXF7JvTHboaU+d5SkFpYTjDL3");
+        BasicAWSCredentials basicAWSCredentials = new BasicAWSCredentials("AKIAUQ5GS36IU5MOGV26", "lZ3qLwRaCT8OdGJ0wqd/a2EZ4A5UVg2zJ1yB5Md4");
         final AmazonS3 s3 = AmazonS3ClientBuilder.standard().withCredentials(new AWSStaticCredentialsProvider(basicAWSCredentials)).withRegion(Regions.US_EAST_2).build();
         try {
 
@@ -37,7 +37,7 @@ public class FileService {
 
     public S3Object getFile(String key){
 
-        BasicAWSCredentials basicAWSCredentials = new BasicAWSCredentials("AKIAUQ5GS36I2ZNLIN4X", "DUWgDy3GtMqBcypqXF7JvTHboaU+d5SkFpYTjDL3");
+        BasicAWSCredentials basicAWSCredentials = new BasicAWSCredentials("AKIAUQ5GS36IU5MOGV26", "lZ3qLwRaCT8OdGJ0wqd/a2EZ4A5UVg2zJ1yB5Md4");
         final AmazonS3 s3 = AmazonS3ClientBuilder.standard().withCredentials(new AWSStaticCredentialsProvider(basicAWSCredentials)).withRegion(Regions.US_EAST_2).build();
         return s3.getObject("backend-spring2020", key);
 
@@ -45,7 +45,7 @@ public class FileService {
 
     public void deleteFile(String key){
 
-        BasicAWSCredentials basicAWSCredentials = new BasicAWSCredentials("AKIAUQ5GS36I2ZNLIN4X", "DUWgDy3GtMqBcypqXF7JvTHboaU+d5SkFpYTjDL3");
+        BasicAWSCredentials basicAWSCredentials = new BasicAWSCredentials("AKIAUQ5GS36IU5MOGV26", "lZ3qLwRaCT8OdGJ0wqd/a2EZ4A5UVg2zJ1yB5Md4");
         final AmazonS3 s3 = AmazonS3ClientBuilder.standard().withCredentials(new AWSStaticCredentialsProvider(basicAWSCredentials)).withRegion(Regions.US_EAST_2).build();
         s3.deleteObject("backend-spring2020", key);
 
