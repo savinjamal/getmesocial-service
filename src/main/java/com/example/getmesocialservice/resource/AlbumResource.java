@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 import java.util.List;
 
+@CrossOrigin(origins = "http://3.134.117.96:8080")
 @RestController
 @RequestMapping("/api/albums")
 public class AlbumResource {
