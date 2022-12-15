@@ -24,7 +24,6 @@ public class AlbumResource {
     
     
     @CrossOrigin(origins = "http://localhost:4200")
-    @CrossOrigin(origins = "http://3.134.117.96:8080/api/albums")
     @GetMapping
     public List<Album> getAllAlbum() {
         return albumService.getAllAlbum();
