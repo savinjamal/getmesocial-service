@@ -17,6 +17,7 @@ public class AlbumResource {
     @Autowired
     private AlbumService albumService;
 
+    @CrossOrigin(origins = "http://localhost:4200")
     @PostMapping
     public Album saveAlbum(@RequestBody @Valid Album album) {
         return albumService.saveAlbum(album);
@@ -28,16 +29,20 @@ public class AlbumResource {
     public List<Album> getAllAlbum() {
         return albumService.getAllAlbum();
     }
+    
+    @CrossOrigin(origins = "http://localhost:4200")
     @GetMapping("/findById")
     public List<Album> getByAlbumId(@RequestParam(name="albumId") String albumId){
         return albumService.getByAlbumId(albumId);
     }
 
+    @CrossOrigin(origins = "http://localhost:4200")
     @PutMapping
     public Album updateAlbum(@RequestBody Album album){
         return albumService.updateAlbum(album);
     }
 
+    @CrossOrigin(origins = "http://localhost:4200")
     @DeleteMapping
     public void deleteAlbum(@RequestParam(name="albumId") String albumId){
         albumService.deleteAlbum(albumId);
