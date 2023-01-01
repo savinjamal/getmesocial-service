@@ -14,12 +14,14 @@ public class Album {
     @ValidCreatedBy
     String createdBy;
     String dateCreated;
+    String photoId;
 
-    public Album(String name, String coverPhotoUrl, String createdBy, String dateCreated) {
+    public Album(String name, String coverPhotoUrl, String createdBy, String dateCreated, String photoId) {
         this.name = name;
         this.coverPhotoUrl = coverPhotoUrl;
         this.createdBy = createdBy;
         this.dateCreated = dateCreated;
+        this.photoId = photoId;
     }
 
     public String getId() {
@@ -36,6 +38,14 @@ public class Album {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getPhotoId() {
+        return photoId;
+    }
+
+    public void setPhotoId(String photoId) {
+        this.photoId = photoId;
     }
 
     public String getCoverPhotoUrl() {
