@@ -17,6 +17,7 @@ import java.util.NoSuchElementException;
 
 @RestController
 @RequestMapping("/api/users")
+@CrossOrigin
 public class UserResource {
 
     @Autowired
@@ -45,10 +46,11 @@ public class UserResource {
     }
     
     @CrossOrigin(origins = "http://localhost:4200")
+    @PutMapping
     public User updateUser(@RequestBody User user){
         return userService.updateUser(user);
     }
-
+    @CrossOrigin(origins = "http://localhost:4200")
     @PutMapping("/updateUserProfilePicture")
     public User updateUserProfilePicture(@RequestBody User user){
         return userService.updateUserProfilePicture(user);
