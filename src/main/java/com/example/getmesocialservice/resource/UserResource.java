@@ -45,11 +45,14 @@ public class UserResource {
     }
     
     @CrossOrigin(origins = "http://localhost:4200")
-    @PutMapping
     public User updateUser(@RequestBody User user){
         return userService.updateUser(user);
     }
-    
+
+    @PutMapping("/updateUserProfilePicture")
+    public User updateUserProfilePicture(@RequestBody User user){
+        return userService.updateUserProfilePicture(user);
+    }
     @CrossOrigin(origins = "http://localhost:4200")
     @DeleteMapping
     public void deleteUser(@RequestParam(name="userId") String userId){
