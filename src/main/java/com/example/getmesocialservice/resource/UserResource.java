@@ -23,7 +23,7 @@ public class UserResource {
     @Autowired
     private UserService userService;
     
-    @CrossOrigin(origins = "http://localhost:4200")
+
     @PostMapping
     public User saveUser(@RequestBody @Valid User user)throws RestrictedInfoException  {
         if(user.getName().equalsIgnoreCase("root")){
@@ -32,30 +32,30 @@ public class UserResource {
         return userService.saveUser(user);
     }
     
-    @CrossOrigin(origins = "http://localhost:4200")
+
     @GetMapping
     public List<User> getAllUser() {
         return userService.getAllUser();
     }
     
-    @CrossOrigin(origins = "http://localhost:4200")
+
     @GetMapping("/findById")
     public List<User> getByUserId(@RequestParam(name="userId") String userId){
 
         return userService.getByUserId(userId);
     }
     
-    @CrossOrigin(origins = "http://localhost:4200")
+
     @PutMapping
     public User updateUser(@RequestBody User user){
         return userService.updateUser(user);
     }
-    @CrossOrigin(origins = "http://localhost:4200")
+
     @PutMapping("/updateUserProfilePicture")
     public User updateUserProfilePicture(@RequestBody User user){
         return userService.updateUserProfilePicture(user);
     }
-    @CrossOrigin(origins = "http://localhost:4200")
+
     @DeleteMapping
     public void deleteUser(@RequestParam(name="userId") String userId){
         userService.deleteUser(userId);
